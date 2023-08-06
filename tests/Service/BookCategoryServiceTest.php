@@ -8,7 +8,6 @@ use App\Model\BookCategoryListResponse;
 use App\Repository\BookCategoryRepository;
 use App\Service\BookCategoryService;
 use App\Tests\AbstractTestCase;
-use Doctrine\Common\Collections\Criteria;
 
 class BookCategoryServiceTest extends AbstractTestCase
 {
