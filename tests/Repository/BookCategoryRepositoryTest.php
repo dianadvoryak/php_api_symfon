@@ -19,15 +19,17 @@ class BookCategoryRepositoryTest extends AbstractRepositoryTest
 
     public function testFindAllSortedByTitle()
     {
-//        $devices = (new BookCategory())->setTitle('Devices')->setSlug('devices');
-//        $android = (new BookCategory())->setTitle('Android')->setSlug('android');
-//        $computer = (new BookCategory())->setTitle('Computer')->setSlug('computer');
-//
-//        foreach ([$devices, $android, $computer] as $category) {
-//            $this->em->persist($category);
-//        }
-//
-//        $this->em->flush();
+        $this->em->createQuery('DELETE App\Entity\BookCategory b')->getResult();
+
+        $devices = (new BookCategory())->setTitle('Devices')->setSlug('devices');
+        $android = (new BookCategory())->setTitle('Android')->setSlug('android');
+        $computer = (new BookCategory())->setTitle('Computer')->setSlug('computer');
+
+        foreach ([$devices, $android, $computer] as $category) {
+            $this->em->persist($category);
+        }
+
+        $this->em->flush();
 
         $titles = array_map(
             fn (BookCategory $bookCategory) => $bookCategory->getTitle(),
