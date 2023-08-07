@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="fig exception handling">
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="ApiExceptionListenerTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.cache/test-results" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.cache/test-results" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/ExceptionMappingResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ExceptionHandler/ExceptionMappingResolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AbstractControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AbstractControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Service/BookCategoryServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/BookCategoryServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +230,7 @@
       <workItem from="1691308762255" duration="46000" />
       <workItem from="1691309144468" duration="71000" />
       <workItem from="1691312495415" duration="3126000" />
-      <workItem from="1691317066662" duration="15927000" />
+      <workItem from="1691317066662" duration="20865000" />
     </task>
     <task id="LOCAL-00001" summary="create Book, BookCategory">
       <option name="closed" value="true" />
@@ -266,17 +264,37 @@
       <option name="project" value="LOCAL" />
       <updated>1691341504707</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ApiExceptionListenerTest">
+      <option name="closed" value="true" />
+      <created>1691344977466</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691344977466</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create Book, BookCategory" />
     <MESSAGE value="bugfix tests" />
     <MESSAGE value="Exception Handling" />
     <MESSAGE value="fig exception handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="fig exception handling" />
+    <MESSAGE value="ApiExceptionListenerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="ApiExceptionListenerTest" />
   </component>
 </project>
