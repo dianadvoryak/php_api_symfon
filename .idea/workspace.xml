@@ -4,10 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="ApiExceptionListenerTest">
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="Subscriber Service">
+      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20230807174559.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArgumentResolver/RequestBodyArgumentResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Attribute/RequestBody.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SubscribeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Subscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception/RequestBodyConvertException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception/SubscriberAlreadyExistsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception/ValidationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Listener/ValidationExceptionListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/SubscriberRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SubscriberRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/SubscriberService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.cache/test-results" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.cache/test-results" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BookCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BookCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ErrorResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ErrorResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +40,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="e42f2ad4290145bdc93682058510acba495c9cb3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -137,6 +163,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
     </include_path>
   </component>
   <component name="ProjectId" id="2TU7MCycs6zOTNv6vhSwDTpo8bn" />
@@ -212,6 +239,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +258,7 @@
       <workItem from="1691308762255" duration="46000" />
       <workItem from="1691309144468" duration="71000" />
       <workItem from="1691312495415" duration="3126000" />
-      <workItem from="1691317066662" duration="20865000" />
+      <workItem from="1691317066662" duration="28920000" />
     </task>
     <task id="LOCAL-00001" summary="create Book, BookCategory">
       <option name="closed" value="true" />
@@ -272,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691344977466</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ApiExceptionListener Test full">
+      <option name="closed" value="true" />
+      <created>1691429899856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691429899859</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +331,8 @@
     <MESSAGE value="Exception Handling" />
     <MESSAGE value="fig exception handling" />
     <MESSAGE value="ApiExceptionListenerTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="ApiExceptionListenerTest" />
+    <MESSAGE value="ApiExceptionListener Test full" />
+    <MESSAGE value="Subscriber Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subscriber Service" />
   </component>
 </project>

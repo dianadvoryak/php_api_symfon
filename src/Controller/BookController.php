@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Model\BookListResponse;
 use App\Model\ErrorResponse;
 use App\Service\BookService;
-use http\Exception\RuntimeException;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use OpenApi\Attributes as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,12 +20,12 @@ class BookController extends AbstractController
     #[OA\Response(
         response: 200,
         description: 'Return books inside a category',
-        content: new Model(type: BookListResponse::class)
+        attachables: [new Model(type: BookListResponse::class)]
     )]
     #[OA\Response(
         response: 400,
         description: 'Book category not found',
-        content: new Model(type: ErrorResponse::class)
+        attachables: [new Model(type: ErrorResponse::class)]
     )]
     #[Route(path: '/api/v1/category/{id}/books', methods: ['GET'])]
     public function booksByCategory(int $id): Response
