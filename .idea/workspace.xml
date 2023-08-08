@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="Subscriber Service">
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230807174559.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ArgumentResolver/RequestBodyArgumentResolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Attribute/RequestBody.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SubscribeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Subscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/RequestBodyConvertException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/SubscriberAlreadyExistsException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/ValidationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Listener/ValidationExceptionListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/SubscriberRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/SubscriberRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/SubscriberService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BookCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BookCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ErrorResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ErrorResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-    </list>
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="Subscriber Service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +233,7 @@
       <workItem from="1691308762255" duration="46000" />
       <workItem from="1691309144468" duration="71000" />
       <workItem from="1691312495415" duration="3126000" />
-      <workItem from="1691317066662" duration="28920000" />
+      <workItem from="1691317066662" duration="29436000" />
     </task>
     <task id="LOCAL-00001" summary="create Book, BookCategory">
       <option name="closed" value="true" />
@@ -315,11 +290,42 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
