@@ -12,36 +12,56 @@ class Book
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
+    #[ORM\Column(type: 'integer')]
     private ?int $id = null;
 
-    #[ORM\Column(type: "string", length: 255)]
+    #[ORM\Column(type: 'string', length: 255)]
     private ?string $title = null;
 
-    #[ORM\Column(type: "string", length: 255)]
+    #[ORM\Column(type: 'string', length: 255)]
     private ?string $slug = null;
 
-    #[ORM\Column(type: "string", length: 255)]
+    #[ORM\Column(type: 'string', length: 255)]
     private ?string $image = null;
 
-    #[ORM\Column(type: "simple_array")]
+    #[ORM\Column(type: 'simple_array')]
     private ?array $authors = null;
 
-    #[ORM\Column(type: "date")]
+    #[ORM\Column(type: 'string', length: 13, nullable: true)]
+    private ?string $isbn = null;
+
+    #[ORM\Column(type: 'text', nullable: true)]
+    private ?string $description = null;
+
+    #[ORM\Column(type: 'date_immutable')]
     private \DateTimeInterface|null $PublicationDate = null;
 
-    #[ORM\Column(type: "boolean", options: ['default' => false])]
+    #[ORM\Column(type: 'boolean', options: ['default' => false])]
     private bool $meap;
 
     /**
      * @var Collection<BookCategory>
      */
     #[ORM\ManyToMany(targetEntity: BookCategory::class)]
+    #[ORM\JoinTable(name: 'book_to_book_category')]
     private Collection $categories;
+
+    /**
+     * @var Collection<BookToBookFormat>
+     */
+    #[ORM\OneToMany(mappedBy: 'book', targetEntity: BookToBookFormat::class)]
+    private Collection $formats;
+
+    /**
+     * @var Collection<Review>
+     */
+    #[ORM\OneToMany(mappedBy: 'book', targetEntity: Review::class)]
+    private Collection $reviews;
 
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->formats = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -69,6 +89,7 @@ class Book
     public function setSlug(?string $slug): self
     {
         $this->slug = $slug;
+
         return $this;
     }
 
@@ -80,6 +101,7 @@ class Book
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
         return $this;
     }
 
@@ -91,6 +113,7 @@ class Book
     public function setAuthors(?array $authors): self
     {
         $this->authors = $authors;
+
         return $this;
     }
 
@@ -102,6 +125,7 @@ class Book
     public function setPublicationDate(?\DateTimeInterface $PublicationDate): self
     {
         $this->PublicationDate = $PublicationDate;
+
         return $this;
     }
 
@@ -113,6 +137,7 @@ class Book
     public function setMeap(bool $meap): self
     {
         $this->meap = $meap;
+
         return $this;
     }
 
@@ -130,7 +155,55 @@ class Book
     public function setCategories(Collection $categories): self
     {
         $this->categories = $categories;
+
         return $this;
     }
 
+    public function getIsbn(): string
+    {
+        return $this->isbn;
+    }
+
+    public function setIsbn(string $isbn): self
+    {
+        $this->isbn = $isbn;
+
+        return $this;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getFormats(): Collection
+    {
+        return $this->formats;
+    }
+
+    public function setFormats(Collection $formats): self
+    {
+        $this->formats = $formats;
+
+        return $this;
+    }
+
+    public function getReviews(): Collection
+    {
+        return $this->reviews;
+    }
+
+    public function setReviews(Collection $reviews): self
+    {
+        $this->reviews = $reviews;
+
+        return $this;
+    }
 }

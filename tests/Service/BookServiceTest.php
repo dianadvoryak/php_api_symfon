@@ -3,7 +3,6 @@
 namespace App\Tests\Service;
 
 use App\Entity\Book;
-use App\Entity\BookCategory;
 use App\Exception\BookCategoryNotFoundException;
 use App\Model\BookListItem;
 use App\Model\BookListResponse;
@@ -58,7 +57,7 @@ class BookServiceTest extends AbstractTestCase
             ->setAuthors(['Tester'])
             ->setImage('http://localhost/test.png')
             ->setCategories(new ArrayCollection())
-            ->setPublicationDate(new \DateTime('2020-10-10'));
+            ->setPublicationDate(new \DateTimeImmutable('2020-10-10'));
 
         $this->setEntityId($book, 123);
 

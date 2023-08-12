@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="Subscriber Service">
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="test subscribe">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.cache/test-results" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.cache/test-results" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Listener/ApiExceptionListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listener/ApiExceptionListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Listener/ValidationExceptionListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listener/ValidationExceptionListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ErrorResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ErrorResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AbstractTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AbstractTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/BookControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/BookControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Repository/BookRepositoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Repository/BookRepositoryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/BookServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/BookServiceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691429899859</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test subscribe">
+      <option name="closed" value="true" />
+      <created>1691777420929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691777420930</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +358,7 @@
     <MESSAGE value="ApiExceptionListenerTest" />
     <MESSAGE value="ApiExceptionListener Test full" />
     <MESSAGE value="Subscriber Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Subscriber Service" />
+    <MESSAGE value="test subscribe" />
+    <option name="LAST_COMMIT_MESSAGE" value="test subscribe" />
   </component>
 </project>
