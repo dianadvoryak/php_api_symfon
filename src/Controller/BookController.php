@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\BookDetails;
 use App\Model\BookListResponse;
 use App\Model\ErrorResponse;
 use App\Service\BookService;
@@ -31,5 +32,21 @@ class BookController extends AbstractController
     public function booksByCategory(int $id): Response
     {
         return $this->json($this->bookService->getBooksByCategory($id));
+    }
+
+    #[OA\Response(
+        response: 200,
+        description: 'Returns book detail information',
+        attachables: [new Model(type: BookDetails::class)]
+    )]
+    #[OA\Response(
+        response: 400,
+        description: 'Book not found',
+        attachables: [new Model(type: ErrorResponse::class)]
+    )]
+    #[Route(path: '/api/v1/book/{id}', methods: ['GET'])]
+    public function bookById(int $id): Response
+    {
+        return $this->json($this->bookService->getBookById($id));
     }
 }

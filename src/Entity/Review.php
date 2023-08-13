@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\Mapping as ORM;
+use OpenApi\Attributes as OA;
 
 #[ORM\HasLifecycleCallbacks]
 #[ORM\Entity(repositoryClass: ReviewRepository::class)]
@@ -15,7 +16,7 @@ class Review
     private ?int $id = null;
 
     #[ORM\Column(type: 'integer')]
-    private int $rqting;
+    private int $rating;
 
     #[ORM\Column(type: 'text')]
     private string $content;
@@ -30,8 +31,9 @@ class Review
     #[ORM\ManyToOne(targetEntity: Book::class, inversedBy: 'reviews')]
     private Book $book;
 
+    #[OA\Property(type: 'datetime_immutable')]
     #[ORM\PrePersist]
-    public function setCreatedValue(): void
+    public function setCreatedAtValue(): void
     {
         $this->createdAt = new \DateTimeImmutable();
     }
@@ -41,14 +43,14 @@ class Review
         return $this->id;
     }
 
-    public function getRqting(): int
+    public function getRating(): int
     {
-        return $this->rqting;
+        return $this->rating;
     }
 
-    public function setRqting(int $rqting): self
+    public function setRating(int $rating): self
     {
-        $this->rqting = $rqting;
+        $this->rating = $rating;
 
         return $this;
     }
