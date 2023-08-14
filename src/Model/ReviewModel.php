@@ -12,7 +12,7 @@ class ReviewModel
 
     private int $rating;
 
-    private int $createAt;
+    private int $createdAt;
 
     public function getId(): int
     {
@@ -62,14 +62,14 @@ class ReviewModel
         return $this;
     }
 
-    public function getCreateAt(): int
+    public function getCreatedAt(): int
     {
-        return $this->createAt;
+        return $this->createdAt;
     }
 
-    public function setCreateAt(int $createAt): self
+    public function setCreateAt(int $createdAt): self
     {
-        $this->createAt = $createAt;
+        $this->createdAt = $createdAt;
 
         return $this;
     }

@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1075</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
       <StartupTime>1691854898</StartupTime>
       <TimeZones>true ACDT
@@ -803,7 +803,7 @@ true posixrules
 13206||10|C|G
 13206||-9223372036854775808|U|G
 13206||10|U|G</Grants>
-      <IntrospectionStateNumber>1075</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4216,7 +4216,7 @@ true posixrules
     <schema id="261" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1075</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4224,7 +4224,7 @@ true posixrules
     <sequence id="262" parent="261" name="book_category_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16440</ObjectId>
-      <SequenceIdentity>1(121)</SequenceIdentity>
+      <SequenceIdentity>1(133)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>861</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4240,7 +4240,7 @@ true posixrules
     <sequence id="264" parent="261" name="book_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16434</ObjectId>
-      <SequenceIdentity>1(152)</SequenceIdentity>
+      <SequenceIdentity>1(168)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>859</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4256,7 +4256,7 @@ true posixrules
     <sequence id="266" parent="261" name="review_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17262</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(5)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4264,7 +4264,7 @@ true posixrules
     <sequence id="267" parent="261" name="subscriber_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16540</ObjectId>
-      <SequenceIdentity>1(10)</SequenceIdentity>
+      <SequenceIdentity>1(12)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>975</StateNumber>
       <OwnerName>postgres</OwnerName>
