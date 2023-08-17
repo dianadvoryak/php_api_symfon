@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="test page book">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.cache/test-results" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.cache/test-results" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20230813142339.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ReviewModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ReviewModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ReviewRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ReviewService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReviewService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/BookControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/BookControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Repository/BookCategoryRepositoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Repository/BookCategoryRepositoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Repository/BookRepositoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Repository/BookRepositoryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mapper/BookMapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapper/BookMapper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/BookDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BookDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BookRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/BookService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/BookService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +150,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="2TU7MCycs6zOTNv6vhSwDTpo8bn" />
@@ -188,6 +189,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hoverfly" />
       <recent name="$PROJECT_DIR$/src/Service" />
       <recent name="$PROJECT_DIR$/tests" />
     </key>
@@ -200,7 +202,7 @@
       <command value="errorresponse" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.database: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.hoverfly: Compose Deployment">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -224,8 +226,22 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.hoverfly: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="hoverfly" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.hoverfly: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
       </list>
@@ -328,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691942496612</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test page book">
+      <option name="closed" value="true" />
+      <created>1692048118635</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692048118635</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,6 +412,7 @@
     <MESSAGE value="add book to book format" />
     <MESSAGE value="add page book / BookDetails" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="test page book" />
+    <option name="LAST_COMMIT_MESSAGE" value="test page book" />
   </component>
 </project>
