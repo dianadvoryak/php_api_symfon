@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="test page book">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="Integration with external systems / hoverfly">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mapper/BookMapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapper/BookMapper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/BookDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BookDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BookRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/BookService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/BookService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Exception/AccessDeniedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Exception/AccessDeniedException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Exception/RecommendationException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Exception/RecommendationException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Exception/RequestException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Exception/RequestException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Model/RecommendationItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Model/RecommendationItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Model/RecommendationResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Model/RecommendationResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/RecommendationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/RecommendationApiService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/RatingService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/RatingService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ReviewService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReviewService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +205,7 @@
       <command value="errorresponse" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.hoverfly: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -210,6 +213,14 @@
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
       </deployment>
       <method v="2" />
     </configuration>
@@ -241,6 +252,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.hoverfly: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
@@ -263,6 +275,8 @@
       <workItem from="1691309144468" duration="71000" />
       <workItem from="1691312495415" duration="3126000" />
       <workItem from="1691317066662" duration="29436000" />
+      <workItem from="1692383912232" duration="295000" />
+      <workItem from="1692384231469" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="create Book, BookCategory">
       <option name="closed" value="true" />
@@ -352,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692048118635</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Integration with external systems / hoverfly">
+      <option name="closed" value="true" />
+      <created>1692298773429</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692298773431</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,6 +435,7 @@
     <MESSAGE value="add page book / BookDetails" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="test page book" />
-    <option name="LAST_COMMIT_MESSAGE" value="test page book" />
+    <MESSAGE value="Integration with external systems / hoverfly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration with external systems / hoverfly" />
   </component>
 </project>

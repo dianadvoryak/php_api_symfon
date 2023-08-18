@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Service\ExceptionHandler\Recommendation;
+namespace App\Service\Recommendation;
 
-use App\Service\ExceptionHandler\Recommendation\Exception\AccessDeniedException;
-use App\Service\ExceptionHandler\Recommendation\Exception\RequestException;
-use App\Service\ExceptionHandler\Recommendation\Model\RecommendationResponse;
+use App\Service\Recommendation\Exception\AccessDeniedException;
+use App\Service\Recommendation\Exception\RequestException;
+use App\Service\Recommendation\Model\RecommendationResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class RecommendationService
+class RecommendationApiService
 {
     public function __construct(private HttpClientInterface $recommendationClient, private SerializerInterface $serializer)
     {

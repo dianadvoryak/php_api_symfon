@@ -14,9 +14,8 @@ use App\Model\BookListItem;
 use App\Model\BookListResponse;
 use App\Repository\BookCategoryRepository;
 use App\Repository\BookRepository;
-use App\Repository\ReviewRepository;
-use App\Service\ExceptionHandler\Recommendation\Model\RecommendationItem;
-use App\Service\ExceptionHandler\Recommendation\RecommendationService;
+use App\Service\Recommendation\Model\RecommendationItem;
+use App\Service\Recommendation\RecommendationApiService;
 use Doctrine\Common\Collections\Collection;
 use Psr\Log\LoggerInterface;
 use SebastianBergmann\Diff\Exception;
@@ -26,10 +25,7 @@ class BookService
     public function __construct(
         private BookRepository $bookRepository,
         private BookCategoryRepository $bookCategoryRepository,
-        private ReviewRepository $reviewRepository,
-        private RatingService $ratingService,
-        private RecommendationService $recommendationService,
-        private LoggerInterface $logger)
+        private RatingService $ratingService)
     {
     }
 
@@ -48,7 +44,6 @@ class BookService
     public function getBookById(int $id): BookDetails
     {
         $book = $this->bookRepository->getById($id);
-        $reviews = $this->reviewRepository->countByBookId($id);
         $recommendations = [];
 
         $categories = $book->getCategories()
@@ -56,36 +51,17 @@ class BookService
                 $bookCategory->getId(), $bookCategory->getTitle(), $bookCategory->getSlug()
             ));
 
-        try {
-            $recommendations = $this->getRecommendations($id);
-        } catch (Exception $ex) {
-            $this->logger->error('error while fetching recommendations', [
-                'exception' => $ex->getMessage(),
-                'bookId' => $id,
-            ]);
-        }
+        $rating = $this->ratingService->calcReviewRatingForBook($id);
 
         return BookMapper::map($book, new BookDetails())
-            ->setRating($this->ratingService->calcReviewRatingForBook($id, $reviews))
-            ->setReviews($reviews)
-            ->setRecommendations($recommendations)
+            ->setRating($rating->getRating())
+            ->setReviews($rating->getTotal())
             ->setFormats($this->mapFormats($book->getFormats()))
             ->setCategories($categories->toArray());
     }
 
-    private function getRecommendations(int $bookId): array
-    {
-        $ids = array_map(
-            fn (RecommendationItem $item) => $item->getId(),
-            $this->recommendationService->getRecommendationsByBookId($bookId)->getRecommendations()
-        );
-
-        return array_map([BookMapper::class, 'mapRecommended'], $this->bookRepository->findBooksByIds($ids));
-    }
-
     /**
      * @param Collection<BookToBookFormat> $formats
-     * @return array
      */
     private function mapFormats(Collection $formats): array
     {

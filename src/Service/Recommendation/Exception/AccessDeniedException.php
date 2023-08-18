@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\ExceptionHandler\Recommendation\Exception;
+namespace App\Service\Recommendation\Exception;
 
 final class AccessDeniedException extends RecommendationException
 {

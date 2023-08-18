@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\ExceptionHandler\Recommendation\Model;
+namespace App\Service\Recommendation\Model;
 
 class RecommendationResponse
 {
