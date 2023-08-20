@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="Integration with external systems / hoverfly">
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="refactoring integration">
+      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mapper/BookMapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapper/BookMapper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/BookDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BookDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/BookService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/BookService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Exception/AccessDeniedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Exception/AccessDeniedException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Exception/RecommendationException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Exception/RecommendationException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Exception/RequestException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Exception/RequestException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Model/RecommendationItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Model/RecommendationItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/Model/RecommendationResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/Model/RecommendationResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ExceptionHandler/Recommendation/RecommendationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/RecommendationApiService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/RatingService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/RatingService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.cache/test-results" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.cache/test-results" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Listener/ApiExceptionListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listener/ApiExceptionListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Recommendation/RecommendationApiService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/RecommendationApiService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/ReviewService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReviewService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/BookServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/BookServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/RatingServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/RatingServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Service/ReviewServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/ReviewServiceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +160,15 @@
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/netresearch/jsonmapper" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/ns3777k/hoverfly" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="2TU7MCycs6zOTNv6vhSwDTpo8bn" />
@@ -205,7 +219,7 @@
       <command value="errorresponse" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.hoverfly: Compose Deployment">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -252,8 +266,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.hoverfly: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
       </list>
@@ -276,7 +290,7 @@
       <workItem from="1691312495415" duration="3126000" />
       <workItem from="1691317066662" duration="29436000" />
       <workItem from="1692383912232" duration="295000" />
-      <workItem from="1692384231469" duration="1390000" />
+      <workItem from="1692384231469" duration="19724000" />
     </task>
     <task id="LOCAL-00001" summary="create Book, BookCategory">
       <option name="closed" value="true" />
@@ -374,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692298773431</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactoring integration">
+      <option name="closed" value="true" />
+      <created>1692385800400</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692385800400</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,6 +458,7 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="test page book" />
     <MESSAGE value="Integration with external systems / hoverfly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration with external systems / hoverfly" />
+    <MESSAGE value="refactoring integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring integration" />
   </component>
 </project>

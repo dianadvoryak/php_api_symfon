@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1181</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
-      <StartupTime>1691854898</StartupTime>
+      <StartupTime>1692385164</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -803,18 +803,18 @@ true posixrules
 13206||10|C|G
 13206||-9223372036854775808|U|G
 13206||10|U|G</Grants>
-      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1181</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="3" parent="1" name="pg_database_owner">
+    <role id="3" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="4" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="4" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="5" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
+    <role id="5" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
     <role id="6" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
@@ -822,29 +822,29 @@ true posixrules
 3375
 3377</RoleGrants>
     </role>
-    <role id="7" parent="1" name="pg_read_all_settings">
+    <role id="7" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="8" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="8" parent="1" name="pg_read_all_stats">
+    <role id="9" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-    </role>
-    <role id="9" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
     </role>
     <role id="10" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="11" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="12" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_signal_backend">
+    <role id="11" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="14" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
+    <role id="12" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="13" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="14" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
     <role id="15" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4216,7 +4216,7 @@ true posixrules
     <schema id="261" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1181</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4224,7 +4224,7 @@ true posixrules
     <sequence id="262" parent="261" name="book_category_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16440</ObjectId>
-      <SequenceIdentity>1(133)</SequenceIdentity>
+      <SequenceIdentity>1(162)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>861</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4232,7 +4232,7 @@ true posixrules
     <sequence id="263" parent="261" name="book_format_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17260</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(5)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4240,7 +4240,7 @@ true posixrules
     <sequence id="264" parent="261" name="book_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16434</ObjectId>
-      <SequenceIdentity>1(168)</SequenceIdentity>
+      <SequenceIdentity>1(204)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>859</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4248,7 +4248,7 @@ true posixrules
     <sequence id="265" parent="261" name="book_to_book_format_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17261</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(5)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4256,7 +4256,7 @@ true posixrules
     <sequence id="266" parent="261" name="review_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17262</ObjectId>
-      <SequenceIdentity>1(5)</SequenceIdentity>
+      <SequenceIdentity>1(12)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4264,7 +4264,7 @@ true posixrules
     <sequence id="267" parent="261" name="subscriber_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16540</ObjectId>
-      <SequenceIdentity>1(12)</SequenceIdentity>
+      <SequenceIdentity>1(16)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>975</StateNumber>
       <OwnerName>postgres</OwnerName>
