@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1181</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1221</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
       <StartupTime>1692385164</StartupTime>
       <TimeZones>true ACDT
@@ -803,18 +803,18 @@ true posixrules
 13206||10|C|G
 13206||-9223372036854775808|U|G
 13206||10|U|G</Grants>
-      <IntrospectionStateNumber>1181</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1221</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="3" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
-    </role>
-    <role id="4" parent="1" name="pg_database_owner">
+    <role id="3" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
+    <role id="4" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
     </role>
     <role id="6" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
@@ -822,29 +822,29 @@ true posixrules
 3375
 3377</RoleGrants>
     </role>
-    <role id="7" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="8" parent="1" name="pg_read_all_settings">
+    <role id="7" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_read_all_stats">
+    <role id="8" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
     </role>
     <role id="10" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="11" parent="1" name="pg_signal_backend">
+    <role id="11" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+    <role id="12" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="13" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
+    <role id="14" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
     </role>
     <role id="15" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4216,7 +4216,7 @@ true posixrules
     <schema id="261" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1181</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1221</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4224,7 +4224,7 @@ true posixrules
     <sequence id="262" parent="261" name="book_category_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16440</ObjectId>
-      <SequenceIdentity>1(162)</SequenceIdentity>
+      <SequenceIdentity>1(176)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>861</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4232,7 +4232,7 @@ true posixrules
     <sequence id="263" parent="261" name="book_format_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17260</ObjectId>
-      <SequenceIdentity>1(5)</SequenceIdentity>
+      <SequenceIdentity>1(7)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4240,7 +4240,7 @@ true posixrules
     <sequence id="264" parent="261" name="book_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16434</ObjectId>
-      <SequenceIdentity>1(204)</SequenceIdentity>
+      <SequenceIdentity>1(224)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>859</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4248,7 +4248,7 @@ true posixrules
     <sequence id="265" parent="261" name="book_to_book_format_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17261</ObjectId>
-      <SequenceIdentity>1(5)</SequenceIdentity>
+      <SequenceIdentity>1(7)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4256,7 +4256,7 @@ true posixrules
     <sequence id="266" parent="261" name="review_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17262</ObjectId>
-      <SequenceIdentity>1(12)</SequenceIdentity>
+      <SequenceIdentity>1(14)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4264,88 +4264,102 @@ true posixrules
     <sequence id="267" parent="261" name="subscriber_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16540</ObjectId>
-      <SequenceIdentity>1(16)</SequenceIdentity>
+      <SequenceIdentity>1(18)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>975</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="268" parent="261" name="book">
+    <sequence id="268" parent="261" name="user_id_seq">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>17319</ObjectId>
+      <SequenceIdentity>1(1)</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1219</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="269" parent="261" name="book">
       <ObjectId>16435</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="261" name="book_category">
+    <table id="270" parent="261" name="book_category">
       <ObjectId>16441</ObjectId>
       <StateNumber>1061</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="270" parent="261" name="book_format">
+    <table id="271" parent="261" name="book_format">
       <ObjectId>17270</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="261" name="book_to_book_category">
+    <table id="272" parent="261" name="book_to_book_category">
       <ObjectId>17263</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="272" parent="261" name="book_to_book_format">
+    <table id="273" parent="261" name="book_to_book_format">
       <ObjectId>17278</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="273" parent="261" name="doctrine_migration_versions">
+    <table id="274" parent="261" name="doctrine_migration_versions">
       <ObjectId>16428</ObjectId>
       <StateNumber>858</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="274" parent="261" name="review">
+    <table id="275" parent="261" name="review">
       <ObjectId>17285</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="275" parent="261" name="subscriber">
+    <table id="276" parent="261" name="subscriber">
       <ObjectId>16541</ObjectId>
       <StateNumber>1061</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="276" parent="268" name="id">
+    <table id="277" parent="261" name="user">
+      <ObjectId>17320</ObjectId>
+      <StateNumber>1219</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="278" parent="269" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>859</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="268" name="title">
+    <column id="279" parent="269" name="title">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>859</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="268" name="slug">
+    <column id="280" parent="269" name="slug">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>864</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="268" name="image">
+    <column id="281" parent="269" name="image">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>864</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="280" parent="268" name="authors">
+    <column id="282" parent="269" name="authors">
       <Comment>(DC2Type:simple_array)</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
@@ -4353,7 +4367,7 @@ true posixrules
       <StateNumber>864</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="281" parent="268" name="publication_date">
+    <column id="283" parent="269" name="publication_date">
       <Comment>(DC2Type:date_immutable)</Comment>
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
@@ -4361,7 +4375,7 @@ true posixrules
       <StateNumber>1068</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="282" parent="268" name="meap">
+    <column id="284" parent="269" name="meap">
       <DasType>boolean|0s</DasType>
       <DefaultExpression>false</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4369,20 +4383,20 @@ true posixrules
       <StateNumber>864</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="283" parent="268" name="isbn">
+    <column id="285" parent="269" name="isbn">
       <DasType>varchar(13)|0s</DasType>
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>16</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="284" parent="268" name="description">
+    <column id="286" parent="269" name="description">
       <DasType>text|0s</DasType>
       <Position>17</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="285" parent="268" name="book_pkey">
+    <index id="287" parent="269" name="book_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16438</ObjectId>
@@ -4391,35 +4405,35 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="286" parent="268" name="book_pkey">
+    <key id="288" parent="269" name="book_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16439</ObjectId>
       <Primary>1</Primary>
       <StateNumber>859</StateNumber>
       <UnderlyingIndexId>16438</UnderlyingIndexId>
     </key>
-    <column id="287" parent="269" name="id">
+    <column id="289" parent="270" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>861</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="288" parent="269" name="title">
+    <column id="290" parent="270" name="title">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>861</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="289" parent="269" name="slug">
+    <column id="291" parent="270" name="slug">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>861</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="290" parent="269" name="book_category_pkey">
+    <index id="292" parent="270" name="book_category_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16446</ObjectId>
@@ -4428,41 +4442,41 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="291" parent="269" name="book_category_pkey">
+    <key id="293" parent="270" name="book_category_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16447</ObjectId>
       <Primary>1</Primary>
       <StateNumber>861</StateNumber>
       <UnderlyingIndexId>16446</UnderlyingIndexId>
     </key>
-    <column id="292" parent="270" name="id">
+    <column id="294" parent="271" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="293" parent="270" name="title">
+    <column id="295" parent="271" name="title">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="294" parent="270" name="description">
+    <column id="296" parent="271" name="description">
       <DasType>text|0s</DasType>
       <Position>3</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="295" parent="270" name="comment">
+    <column id="297" parent="271" name="comment">
       <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>4</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="296" parent="270" name="book_format_pkey">
+    <index id="298" parent="271" name="book_format_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17276</ObjectId>
@@ -4471,28 +4485,28 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="297" parent="270" name="book_format_pkey">
+    <key id="299" parent="271" name="book_format_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17277</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1068</StateNumber>
       <UnderlyingIndexId>17276</UnderlyingIndexId>
     </key>
-    <column id="298" parent="271" name="book_id">
+    <column id="300" parent="272" name="book_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="299" parent="271" name="book_category_id">
+    <column id="301" parent="272" name="book_category_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="300" parent="271" name="fk_57511be216a2b381">
+    <foreign-key id="302" parent="272" name="fk_57511be216a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17293</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4503,7 +4517,7 @@ true posixrules
       <RefTableName>book</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="301" parent="271" name="fk_57511be240b1d29e">
+    <foreign-key id="303" parent="272" name="fk_57511be240b1d29e">
       <ColNames>book_category_id</ColNames>
       <ObjectId>17298</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4514,7 +4528,7 @@ true posixrules
       <RefTableName>book_category</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="302" parent="271" name="book_to_book_category_pkey">
+    <index id="304" parent="272" name="book_to_book_category_pkey">
       <ColNames>book_id
 book_category_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -4524,60 +4538,60 @@ book_category_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="303" parent="271" name="idx_57511be216a2b381">
+    <index id="305" parent="272" name="idx_57511be216a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17268</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="304" parent="271" name="idx_57511be240b1d29e">
+    <index id="306" parent="272" name="idx_57511be240b1d29e">
       <ColNames>book_category_id</ColNames>
       <ObjectId>17269</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="305" parent="271" name="book_to_book_category_pkey">
+    <key id="307" parent="272" name="book_to_book_category_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17267</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1068</StateNumber>
       <UnderlyingIndexId>17266</UnderlyingIndexId>
     </key>
-    <column id="306" parent="272" name="id">
+    <column id="308" parent="273" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="307" parent="272" name="book_id">
+    <column id="309" parent="273" name="book_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="308" parent="272" name="format_id">
+    <column id="310" parent="273" name="format_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="309" parent="272" name="price">
+    <column id="311" parent="273" name="price">
       <DasType>numeric(10,2 digit)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="310" parent="272" name="discount_percent">
+    <column id="312" parent="273" name="discount_percent">
       <DasType>integer|0s</DasType>
       <Position>5</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="311" parent="272" name="fk_d02de22216a2b381">
+    <foreign-key id="313" parent="273" name="fk_d02de22216a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17303</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4587,7 +4601,7 @@ book_category_id</ColNames>
       <RefTableName>book</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="312" parent="272" name="fk_d02de222d629f605">
+    <foreign-key id="314" parent="273" name="fk_d02de222d629f605">
       <ColNames>format_id</ColNames>
       <ObjectId>17308</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4597,7 +4611,7 @@ book_category_id</ColNames>
       <RefTableName>book_format</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="313" parent="272" name="book_to_book_format_pkey">
+    <index id="315" parent="273" name="book_to_book_format_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17281</ObjectId>
@@ -4606,46 +4620,46 @@ book_category_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="314" parent="272" name="idx_d02de22216a2b381">
+    <index id="316" parent="273" name="idx_d02de22216a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17283</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="315" parent="272" name="idx_d02de222d629f605">
+    <index id="317" parent="273" name="idx_d02de222d629f605">
       <ColNames>format_id</ColNames>
       <ObjectId>17284</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="316" parent="272" name="book_to_book_format_pkey">
+    <key id="318" parent="273" name="book_to_book_format_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17282</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1068</StateNumber>
       <UnderlyingIndexId>17281</UnderlyingIndexId>
     </key>
-    <column id="317" parent="273" name="version">
+    <column id="319" parent="274" name="version">
       <DasType>varchar(191)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>858</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="318" parent="273" name="executed_at">
+    <column id="320" parent="274" name="executed_at">
       <DasType>timestamp(0)|0s</DasType>
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>2</Position>
       <StateNumber>858</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="319" parent="273" name="execution_time">
+    <column id="321" parent="274" name="execution_time">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>858</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="320" parent="273" name="doctrine_migration_versions_pkey">
+    <index id="322" parent="274" name="doctrine_migration_versions_pkey">
       <ColNames>version</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16432</ObjectId>
@@ -4657,49 +4671,49 @@ book_category_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="321" parent="273" name="doctrine_migration_versions_pkey">
+    <key id="323" parent="274" name="doctrine_migration_versions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16433</ObjectId>
       <Primary>1</Primary>
       <StateNumber>858</StateNumber>
       <UnderlyingIndexId>16432</UnderlyingIndexId>
     </key>
-    <column id="322" parent="274" name="id">
+    <column id="324" parent="275" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="323" parent="274" name="book_id">
+    <column id="325" parent="275" name="book_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="324" parent="274" name="rating">
+    <column id="326" parent="275" name="rating">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="325" parent="274" name="content">
+    <column id="327" parent="275" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="326" parent="274" name="author">
+    <column id="328" parent="275" name="author">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1068</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="327" parent="274" name="created_at">
+    <column id="329" parent="275" name="created_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <DasType>timestamp(0)|0s</DasType>
       <NotNull>1</NotNull>
@@ -4707,7 +4721,7 @@ book_category_id</ColNames>
       <StateNumber>1068</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="328" parent="274" name="fk_794381c616a2b381">
+    <foreign-key id="330" parent="275" name="fk_794381c616a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17313</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4717,7 +4731,7 @@ book_category_id</ColNames>
       <RefTableName>book</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="329" parent="274" name="review_pkey">
+    <index id="331" parent="275" name="review_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17290</ObjectId>
@@ -4726,34 +4740,34 @@ book_category_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="330" parent="274" name="idx_794381c616a2b381">
+    <index id="332" parent="275" name="idx_794381c616a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17292</ObjectId>
       <StateNumber>1068</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="331" parent="274" name="review_pkey">
+    <key id="333" parent="275" name="review_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17291</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1068</StateNumber>
       <UnderlyingIndexId>17290</UnderlyingIndexId>
     </key>
-    <column id="332" parent="275" name="id">
+    <column id="334" parent="276" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>975</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="333" parent="275" name="email">
+    <column id="335" parent="276" name="email">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>975</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="334" parent="275" name="created_at">
+    <column id="336" parent="276" name="created_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <DasType>timestamp(0)|0s</DasType>
       <NotNull>1</NotNull>
@@ -4761,7 +4775,7 @@ book_category_id</ColNames>
       <StateNumber>975</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="335" parent="275" name="subscriber_pkey">
+    <index id="337" parent="276" name="subscriber_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16544</ObjectId>
@@ -4770,12 +4784,73 @@ book_category_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="336" parent="275" name="subscriber_pkey">
+    <key id="338" parent="276" name="subscriber_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16545</ObjectId>
       <Primary>1</Primary>
       <StateNumber>975</StateNumber>
       <UnderlyingIndexId>16544</UnderlyingIndexId>
+    </key>
+    <column id="339" parent="277" name="id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1219</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="340" parent="277" name="first_name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>1219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="341" parent="277" name="last_name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>1219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="342" parent="277" name="email">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>1219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="343" parent="277" name="password">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>1219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="344" parent="277" name="user_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17325</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1219</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="345" parent="277" name="uniq_8d93d649e7927c74">
+      <ColNames>email</ColNames>
+      <ObjectId>17327</ObjectId>
+      <StateNumber>1219</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="346" parent="277" name="user_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17326</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1219</StateNumber>
+      <UnderlyingIndexId>17325</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
