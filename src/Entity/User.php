@@ -28,6 +28,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private string $password;
 
+    #[ORM\Column(type: 'simple_array')]
+    private array $roles;
+
     public function getFirstName(): string
     {
         return $this->firstName;
@@ -81,9 +84,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
     public function getRoles(): array
     {
-        return [];
+        return $this->roles;
     }
 
     public function getSalt(): ?string
