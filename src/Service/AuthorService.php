@@ -5,7 +5,6 @@ namespace App\Service;
 use App\Entity\Book;
 use App\Exception\BookAlreadyExistsException;
 use App\Model\Author\CreateBookRequest;
-use App\Model\Author\PublishBookRequest;
 use App\Model\Author\UploadCoverResponse;
 use App\Model\BookListItem;
 use App\Model\BookListResponse;
@@ -13,7 +12,7 @@ use App\Model\IdResponse;
 use App\Repository\BookRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class AuthorService
@@ -22,7 +21,6 @@ class AuthorService
         private EntityManagerInterface $em,
         private BookRepository $bookRepository,
         private SluggerInterface $slugger,
-        private Security $security,
         private UploadService $uploadService
     ) {
     }
@@ -44,25 +42,15 @@ class AuthorService
         return new UploadCoverResponse($link);
     }
 
-    public function publish(int $id, PublishBookRequest $publishBookRequest): void
-    {
-        $this->setPublicationDate($id, $publishBookRequest->getDate());
-    }
-
-    public function unpublish(int $id, PublishBookRequest $publishBookRequest): void
-    {
-        $this->setPublicationDate($id, null);
-    }
-
-    public function getBooks(): BookListResponse
+    public function getBooks(UserInterface $user): BookListResponse
     {
         return new BookListResponse(
             array_map([$this, 'map'],
-                $this->bookRepository->findUserBooks($this->security->getUser()))
+                $this->bookRepository->findUserBooks($user))
         );
     }
 
-    public function createBook(CreateBookRequest $request): IdResponse
+    public function createBook(CreateBookRequest $request, UserInterface $user): IdResponse
     {
         $slug = $this->slugger->slug($request->getTitle());
         if ($this->bookRepository->existsBySlug($slug)) {
@@ -73,7 +61,7 @@ class AuthorService
             ->setTitle($request->getTitle())
             ->setMeap(false)
             ->setSlug($slug)
-            ->setUser($this->security->getUser());
+            ->setUser($user);
 
         $this->em->persist($book);
         $this->em->flush();
@@ -86,14 +74,6 @@ class AuthorService
         $book = $this->bookRepository->getUserBookById($id, $this->security->getUser());
 
         $this->em->remove($book);
-        $this->em->flush();
-    }
-
-    private function setPublicationDate(int $id, ?\DateTimeInterface $dateTime): void
-    {
-        $book = $this->bookRepository->getUserBookById($id, $this->security->getUser());
-        $book->setPublicationDate(null);
-
         $this->em->flush();
     }
 

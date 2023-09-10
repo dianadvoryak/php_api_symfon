@@ -86,7 +86,7 @@ class AuthorController extends AbstractController
     #[OA\RequestBody(attachables: [new Model(type: CreateBookRequest::class)])]
     public function createBook(#[RequestBody] CreateBookRequest $request, #[CurrentUser] UserInterface $user): Response
     {
-        return $this->json($this->authorService->createBook($request));
+        return $this->json($this->authorService->createBook($request, $user));
     }
 
     #[Route(path: '/api/v1/author/book/{id}', methods: ['DELETE'])]
