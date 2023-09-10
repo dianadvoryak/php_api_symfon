@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="refactoring integration">
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d97ba758-a622-4581-8214-bb6d80d79839/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.cache/test-results" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.cache/test-results" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Listener/ApiExceptionListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listener/ApiExceptionListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/Recommendation/RecommendationApiService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Recommendation/RecommendationApiService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ReviewService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReviewService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Listener/ApiExceptionListenerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Service/BookServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/BookServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Service/RatingServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/RatingServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Service/ReviewServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Service/ReviewServiceTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="79b7d6a5-1060-4785-9846-87aaab05b4a0" name="Changes" comment="refactoring integration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
