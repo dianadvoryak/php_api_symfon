@@ -14,32 +14,22 @@ security:
                 class: App\Entity\User
                 property: email
     firewalls:
-        login:
+        dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        api:
+            pattern: ^/api
             stateless: true
+            entry_point: jwt
             json_login:
                 check_path: api_login_check
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-        api:
-            pattern: ^/api
-            stateless: true
             jwt: ~
+            refresh_jwt:
+                check_path: api_refresh_token
 
-#        dev:
-#            pattern: ^/(_(profiler|wdt)|css|images|js)/
-#            security: false
-#        api:
-#            pattern: ^/api
-#            stateless: true
-#            entry_point: jwt
-#            json_login:
-#                check_path: api_login_check
-#                success_handler: lexik_jwt_authentication.handler.authentication_success
-#                failure_handler: lexik_jwt_authentication.handler.authentication_failure
-#            jwt: ~
-#            refresh_jwt:
-#                check_path: api_refresh_token
+
 
     access_control:
         - { path: ^/api/v1/admin, roles: ROLE_ADMIN }
