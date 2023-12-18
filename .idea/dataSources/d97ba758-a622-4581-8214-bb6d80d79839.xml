@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="postgres@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>mdy</DateStyle>
       <IntrospectionStateNumber>1221</IntrospectionStateNumber>
@@ -4224,7 +4224,7 @@ true posixrules
     <sequence id="262" parent="261" name="book_category_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16440</ObjectId>
-      <SequenceIdentity>1(176)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>861</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4232,7 +4232,7 @@ true posixrules
     <sequence id="263" parent="261" name="book_format_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17260</ObjectId>
-      <SequenceIdentity>1(7)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4240,7 +4240,7 @@ true posixrules
     <sequence id="264" parent="261" name="book_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16434</ObjectId>
-      <SequenceIdentity>1(224)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>859</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4248,7 +4248,7 @@ true posixrules
     <sequence id="265" parent="261" name="book_to_book_format_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17261</ObjectId>
-      <SequenceIdentity>1(7)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4256,7 +4256,7 @@ true posixrules
     <sequence id="266" parent="261" name="review_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17262</ObjectId>
-      <SequenceIdentity>1(14)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1068</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4264,7 +4264,7 @@ true posixrules
     <sequence id="267" parent="261" name="subscriber_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>16540</ObjectId>
-      <SequenceIdentity>1(18)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>975</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4272,7 +4272,7 @@ true posixrules
     <sequence id="268" parent="261" name="user_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17319</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>1219</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4510,9 +4510,9 @@ true posixrules
       <ColNames>book_id</ColNames>
       <ObjectId>17293</ObjectId>
       <OnDelete>cascade</OnDelete>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
       <StateNumber>1068</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefKeyColNames>id</RefKeyColNames>
       <RefTableId>16435</RefTableId>
       <RefTableName>book</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4521,9 +4521,9 @@ true posixrules
       <ColNames>book_category_id</ColNames>
       <ObjectId>17298</ObjectId>
       <OnDelete>cascade</OnDelete>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
       <StateNumber>1068</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefKeyColNames>id</RefKeyColNames>
       <RefTableId>16441</RefTableId>
       <RefTableName>book_category</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4594,9 +4594,9 @@ book_category_id</ColNames>
     <foreign-key id="313" parent="273" name="fk_d02de22216a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17303</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
       <StateNumber>1068</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefKeyColNames>id</RefKeyColNames>
       <RefTableId>16435</RefTableId>
       <RefTableName>book</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4604,9 +4604,9 @@ book_category_id</ColNames>
     <foreign-key id="314" parent="273" name="fk_d02de222d629f605">
       <ColNames>format_id</ColNames>
       <ObjectId>17308</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
       <StateNumber>1068</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefKeyColNames>id</RefKeyColNames>
       <RefTableId>17270</RefTableId>
       <RefTableName>book_format</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4724,9 +4724,9 @@ book_category_id</ColNames>
     <foreign-key id="330" parent="275" name="fk_794381c616a2b381">
       <ColNames>book_id</ColNames>
       <ObjectId>17313</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
       <StateNumber>1068</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefKeyColNames>id</RefKeyColNames>
       <RefTableId>16435</RefTableId>
       <RefTableName>book</RefTableName>
       <RefTableKind>table</RefTableKind>
